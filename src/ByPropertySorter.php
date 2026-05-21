@@ -8,17 +8,9 @@ use Webmozart\Assert\Assert;
 
 readonly class ByPropertySorter
 {
-    public static function createDefault(): self
-    {
-        return new self(
-            new PropertyAccessor(),
-            new AssociativeSorter(),
-        );
-    }
-
     public function __construct(
-        private PropertyAccessorInterface $propertyAccessor,
-        private AssociativeSorter $associativeSorter,
+        private PropertyAccessorInterface $propertyAccessor = new PropertyAccessor(),
+        private AssociativeSorter $associativeSorter = new AssociativeSorter(),
     ) {
     }
 

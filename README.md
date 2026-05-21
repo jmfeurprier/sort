@@ -84,7 +84,7 @@ Property path syntax is from [Symfony PropertyAccess component](https://symfony.
 
 use Jmf\Sort\ByPropertySorter;
 
-$sorter = ByPropertySorter::createDefault();
+$sorter = new ByPropertySorter();
 
 $unsorted = [
     ['foo' => 'def', 'bar' => 123],
@@ -114,7 +114,7 @@ $sorted = $sorter->sort(
 
 use Jmf\Sort\ByPropertySorter;
 
-$sorter = ByPropertySorter::createDefault();
+$sorter = new ByPropertySorter();
 
 $articles = getArticles(); // Objects from a repository. 
 
